@@ -19,4 +19,8 @@ contract DeployMerkleAirdrop is Script{
         vm.stopBroadcast();
         return (token, airdrop);
     }
+
+    function run() external returns (BagelToken, MerkleAirdrop) {
+        return deployMerkleAirdrop();
+    }
 }
